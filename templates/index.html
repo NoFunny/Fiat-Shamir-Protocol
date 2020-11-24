@@ -1,0 +1,43 @@
+<!doctype html>
+<title>Hello from FSP</title>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    h1{
+        display: block;
+        text-align-last: center;
+    }
+
+    form{
+        display: initial;
+        margin-left: 18%;
+        margin-top: 2%;
+        text-align-last: center;
+    }
+
+    button{
+        margin-top: 2%;
+    }
+
+</style>
+<body style="background: #00A388">
+    <h1>Hello, you on Fiat-Shamir-Protocol page!</h1>
+    <form action="/createUserA/" method="GET">
+        <button style="height: 30px; width: 150px; font-size: 15px" name="usrABtn" type="submit">CreateUserA</button>
+    </form>
+    <form action="/createEva/" method="GET">
+        <button style="height: 30px; width: 150px; font-size: 15px" name="EvaBtn" type="submit">CreateEva</button>
+    </form>
+    <form action="/createUserB/" method="GET">
+        <button style="height: 30px; width: 150px; font-size: 15px" name="usrBBtn" type="submit">CreateUserB</button>
+    </form>
+    <form action="/startProtocol/5/">
+        <button id="start" style="height: 30px; width: 150px; font-size: 15px" name="StartBtn" type="submit">startProtocol</button>
+    </form>
+    <form>
+        <p>
+            Количество раундов - 40
+        </p>
+    </form>
+</body>

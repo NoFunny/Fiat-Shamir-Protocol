@@ -1,0 +1,31 @@
+<!doctype html>
+<title>Status OK!</title>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/success.css')}}">
+</head>
+<div class="full-screen">
+  <div class='container'>
+    <span class="error-num">2</span>
+    <div class='eye'></div>
+    <div class='eye'></div>
+
+    <p class="sub-text">Success!<span class="italic"> userA proved userB knowledge of the secret </span></p>
+    <a href="/">Go back</a>
+  </div>
+</div>
+<script>
+    $(".full-screen").mousemove(function(event) {
+  var eye = $(".eye");
+  var x = (eye.offset().left) + (eye.width() / 2);
+  var y = (eye.offset().top) + (eye.height() / 2);
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = (rad * (180 / Math.PI) * -1) + 180;
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)'
+  });
+});
+</script>
